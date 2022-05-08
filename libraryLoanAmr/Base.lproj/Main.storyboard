@@ -310,6 +310,9 @@
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WPc-uy-iaB">
                                 <rect key="frame" x="20" y="293" width="374" height="216"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="KXj-V7-njw" eventType="valueChanged" id="YCS-aU-Ycf"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Al0-3c-TPl">
                                 <rect key="frame" x="208.5" y="518.5" width="41.5" height="20.5"/>
@@ -317,11 +320,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="9EQ-z8-0RI">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EQ-z8-0RI">
                                 <rect key="frame" x="85" y="707" width="247" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqN-jd-xMe">
-                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                         <connections>
@@ -329,7 +332,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFg-3o-29T">
-                                        <rect key="frame" x="178.5" y="0.0" width="68.5" height="31"/>
+                                        <rect key="frame" x="123.5" y="0.0" width="123.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                         <connections>
@@ -360,6 +363,12 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZU-EO-tcI">
+                                <rect key="frame" x="199" y="251" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bDT-jn-b6X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -373,6 +382,7 @@
                             <constraint firstItem="eIx-pd-la9" firstAttribute="leading" secondItem="bDT-jn-b6X" secondAttribute="leading" constant="20" id="KFd-3h-bco"/>
                             <constraint firstItem="eIx-pd-la9" firstAttribute="top" secondItem="cka-fS-y7x" secondAttribute="bottom" constant="24" id="Kgf-mX-QnB"/>
                             <constraint firstItem="bDT-jn-b6X" firstAttribute="trailing" secondItem="WPc-uy-iaB" secondAttribute="trailing" constant="20" id="Kot-eY-3cj"/>
+                            <constraint firstItem="gZU-EO-tcI" firstAttribute="top" secondItem="eIx-pd-la9" secondAttribute="bottom" constant="31" id="OOK-B2-yS1"/>
                             <constraint firstItem="bDT-jn-b6X" firstAttribute="bottom" secondItem="9EQ-z8-0RI" secondAttribute="bottom" constant="124" id="PaP-cD-LNi"/>
                             <constraint firstItem="cka-fS-y7x" firstAttribute="top" secondItem="bDT-jn-b6X" secondAttribute="top" constant="84" id="Qcu-IE-1iU"/>
                             <constraint firstItem="bDT-jn-b6X" firstAttribute="trailing" secondItem="eIx-pd-la9" secondAttribute="trailing" constant="20" id="TAs-rT-MPC"/>
@@ -380,6 +390,7 @@
                             <constraint firstItem="9EQ-z8-0RI" firstAttribute="top" secondItem="Al0-3c-TPl" secondAttribute="bottom" constant="168" id="hSW-sd-iqC"/>
                             <constraint firstItem="Al0-3c-TPl" firstAttribute="leading" secondItem="WkP-Xd-PeM" secondAttribute="trailing" constant="64" id="hoA-i6-ffe"/>
                             <constraint firstItem="cka-fS-y7x" firstAttribute="leading" secondItem="bDT-jn-b6X" secondAttribute="leading" constant="21" id="iM4-cH-1eE"/>
+                            <constraint firstItem="gZU-EO-tcI" firstAttribute="leading" secondItem="PFg-zP-qfD" secondAttribute="trailing" constant="64" id="qx1-pj-go6"/>
                             <constraint firstItem="bDT-jn-b6X" firstAttribute="trailing" secondItem="cka-fS-y7x" secondAttribute="trailing" constant="21" id="tWy-hF-p6u"/>
                             <constraint firstItem="WkP-Xd-PeM" firstAttribute="leading" secondItem="bDT-jn-b6X" secondAttribute="leading" constant="20" id="u5w-f9-cF6"/>
                             <constraint firstItem="PFg-zP-qfD" firstAttribute="top" secondItem="eIx-pd-la9" secondAttribute="bottom" constant="31" id="xuW-Cq-7vN"/>
@@ -390,6 +401,7 @@
                         <outlet property="dateKembali" destination="Al0-3c-TPl" id="9Bt-kh-dRu"/>
                         <outlet property="datePinjam" destination="WPc-uy-iaB" id="iQl-UV-DDX"/>
                         <outlet property="nama_text" destination="wnr-A7-kDK" id="GGg-Tb-Trh"/>
+                        <outlet property="tanggalPinjam" destination="gZU-EO-tcI" id="kAk-dR-gBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPJ-ZU-ddi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
