@@ -23,6 +23,10 @@
 		A09E60CF28278DCF005534C5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60CE28278DCF005534C5 /* Model.swift */; };
 		A09E60D128278EC0005534C5 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60D028278EC0005534C5 /* FetchData.swift */; };
 		A09E60D32827AB01005534C5 /* DetailBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60D22827AB01005534C5 /* DetailBookViewController.swift */; };
+		A09E60D82827BC7D005534C5 /* BorrowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60D62827BC7D005534C5 /* BorrowCell.swift */; };
+		A09E60D92827BC7D005534C5 /* BorrowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09E60D72827BC7D005534C5 /* BorrowCell.xib */; };
+		A09E60DB2827BEF4005534C5 /* PinjamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60DA2827BEF4005534C5 /* PinjamViewController.swift */; };
+		A09E60DD2827C0FC005534C5 /* DetailPinjamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60DC2827C0FC005534C5 /* DetailPinjamViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		A09E60CE28278DCF005534C5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A09E60D028278EC0005534C5 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		A09E60D22827AB01005534C5 /* DetailBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewController.swift; sourceTree = "<group>"; };
+		A09E60D62827BC7D005534C5 /* BorrowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowCell.swift; sourceTree = "<group>"; };
+		A09E60D72827BC7D005534C5 /* BorrowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorrowCell.xib; sourceTree = "<group>"; };
+		A09E60DA2827BEF4005534C5 /* PinjamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinjamViewController.swift; sourceTree = "<group>"; };
+		A09E60DC2827C0FC005534C5 /* DetailPinjamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPinjamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,10 @@
 				A09E60C928276EDA005534C5 /* BookTableViewCell.xib */,
 				A09E60CC2827763A005534C5 /* AddBookViewController.swift */,
 				A09E60D22827AB01005534C5 /* DetailBookViewController.swift */,
+				A09E60D62827BC7D005534C5 /* BorrowCell.swift */,
+				A09E60D72827BC7D005534C5 /* BorrowCell.xib */,
+				A09E60DA2827BEF4005534C5 /* PinjamViewController.swift */,
+				A09E60DC2827C0FC005534C5 /* DetailPinjamViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09E60D92827BC7D005534C5 /* BorrowCell.xib in Resources */,
 				A09E60CB28276EDA005534C5 /* BookTableViewCell.xib in Resources */,
 				A04DC66E2826D0DE00A725E6 /* LaunchScreen.storyboard in Resources */,
 				A04DC66B2826D0DE00A725E6 /* Assets.xcassets in Resources */,
@@ -180,6 +193,7 @@
 				A09E60CA28276EDA005534C5 /* BookTableViewCell.swift in Sources */,
 				A09E60BA28272C72005534C5 /* LoginViewController.swift in Sources */,
 				A09E60D32827AB01005534C5 /* DetailBookViewController.swift in Sources */,
+				A09E60DB2827BEF4005534C5 /* PinjamViewController.swift in Sources */,
 				A09E60D128278EC0005534C5 /* FetchData.swift in Sources */,
 				A09E60BC28272C97005534C5 /* RegisterViewController.swift in Sources */,
 				A04DC6662826D0DB00A725E6 /* WelcomeViewController.swift in Sources */,
@@ -187,6 +201,8 @@
 				A09E60CF28278DCF005534C5 /* Model.swift in Sources */,
 				A04DC6622826D0DB00A725E6 /* AppDelegate.swift in Sources */,
 				A04DC6642826D0DB00A725E6 /* SceneDelegate.swift in Sources */,
+				A09E60D82827BC7D005534C5 /* BorrowCell.swift in Sources */,
+				A09E60DD2827C0FC005534C5 /* DetailPinjamViewController.swift in Sources */,
 				A09E60CD2827763A005534C5 /* AddBookViewController.swift in Sources */,
 				A09E60BF28273AF2005534C5 /* HomeViewController.swift in Sources */,
 			);
