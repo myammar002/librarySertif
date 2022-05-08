@@ -22,6 +22,7 @@
 		A09E60CD2827763A005534C5 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60CC2827763A005534C5 /* AddBookViewController.swift */; };
 		A09E60CF28278DCF005534C5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60CE28278DCF005534C5 /* Model.swift */; };
 		A09E60D128278EC0005534C5 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60D028278EC0005534C5 /* FetchData.swift */; };
+		A09E60D32827AB01005534C5 /* DetailBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60D22827AB01005534C5 /* DetailBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A09E60CC2827763A005534C5 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		A09E60CE28278DCF005534C5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A09E60D028278EC0005534C5 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
+		A09E60D22827AB01005534C5 /* DetailBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				A09E60C828276EDA005534C5 /* BookTableViewCell.swift */,
 				A09E60C928276EDA005534C5 /* BookTableViewCell.xib */,
 				A09E60CC2827763A005534C5 /* AddBookViewController.swift */,
+				A09E60D22827AB01005534C5 /* DetailBookViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				A09E60CA28276EDA005534C5 /* BookTableViewCell.swift in Sources */,
 				A09E60BA28272C72005534C5 /* LoginViewController.swift in Sources */,
+				A09E60D32827AB01005534C5 /* DetailBookViewController.swift in Sources */,
 				A09E60D128278EC0005534C5 /* FetchData.swift in Sources */,
 				A09E60BC28272C97005534C5 /* RegisterViewController.swift in Sources */,
 				A04DC6662826D0DB00A725E6 /* WelcomeViewController.swift in Sources */,

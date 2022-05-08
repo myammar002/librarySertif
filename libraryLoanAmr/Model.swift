@@ -9,8 +9,9 @@ import UIKit
 
 
 struct ResponseBuku : Codable {
+    var id: String
     var nama_buku : String
     var tahun_rilis : String
     var penulis: String
-//    var gambar: String
+    var gambar_buku: String
 }

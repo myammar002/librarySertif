@@ -15,6 +15,10 @@ class AddBookViewController: UIViewController {
     @IBOutlet weak var penulis_textfield: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    var url : String = ""
+    
+    weak var refreshDelegate : RefreshDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -51,13 +55,13 @@ class AddBookViewController: UIViewController {
             let judul = judul_textfield.text
             let tahun = tahun_textfield.text
             let penulis = penulis_textfield.text
-            let gambar = imageView.image
+            let gambar = url
             //  Connection with web server passing the values with POST
              let request = NSMutableURLRequest(url: NSURL(string: "https://yashcollection.000webhostapp.com/library-add-buku.php")! as URL)
              request.httpMethod = "POST"
 
              // Collect value
-            let postString = "nama=\(judul!)&tahun=\(tahun!)&penulis=\(penulis!)&gambar=\(gambar!)"
+            let postString = "nama=\(judul!)&tahun=\(tahun!)&penulis=\(penulis!)&gambar=\(gambar)"
              // Encoding the text values in UTF8
              request.httpBody = postString.data(using: String.Encoding.utf8)
 
@@ -79,7 +83,7 @@ class AddBookViewController: UIViewController {
             let alertController = UIAlertController(title: "Succesfully", message: "Buku Ditambahkan", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {action in
                 self.dismiss(animated: true, completion: { [self] in
-             //       refreshDelegate?.goLoad()
+                    refreshDelegate?.goLoad()
                 } )
     }))
             self.present(alertController, animated: true, completion: nil)
@@ -97,27 +101,13 @@ class AddBookViewController: UIViewController {
     
    
 extension AddBookViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let image = info[.originalImage] as! UIImage
-//        self.imageView.image = image
-//        self.dismiss(animated: true, completion: nil)
-//    }
-    
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let imgUrl = info[UIImagePickerController.InfoKey.imageURL.rawValue] as? URL{
-            let imgName = imgUrl.lastPathComponent
-            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-            let localPath = documentDirectory?.appending(imgName)
-            
+
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             let image = info[.originalImage] as! UIImage
-            let data = image.pngData()! as NSData
-            data.write(toFile: localPath!, atomically: true)
-            //let imageData = NSData(contentsOfFile: localPath!)!
-            let photoURL = URL.init(fileURLWithPath: localPath!)//NSURL(fileURLWithPath: localPath!)
-            print(photoURL)
+            let imageURL = info[.imageURL] as? URL
+            url = "\(String(describing: imageURL!.path))"
+            self.imageView.image = image
+            self.dismiss(animated: true, completion: nil)
         }
-        self.dismiss(animated: true, completion: nil)
-    }
     
 }
