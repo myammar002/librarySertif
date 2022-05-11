@@ -13,6 +13,7 @@ class BorrowCell: UITableViewCell {
     @IBOutlet weak var nama: UILabel!
     @IBOutlet weak var nama_peminjam: UILabel!
     @IBOutlet weak var admin: UILabel!
+    @IBOutlet weak var tanggal_pinjam: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

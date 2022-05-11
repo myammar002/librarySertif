@@ -15,3 +15,11 @@ struct ResponseBuku : Codable {
     var penulis: String
     var gambar_buku: String
 }
+
+struct ResponseInvoice: Codable {
+    var id: String
+    var nama_buku : String
+    var nama_peminjam : String
+    var tanggal_kembali : String
+    var tanggal_pinjam: String
+}
