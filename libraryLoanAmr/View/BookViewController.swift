@@ -113,7 +113,32 @@ extension BookViewController: UITableViewDataSource {
             }
             task.resume()
             self.dataModel.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            let dataImage = coreData.fetchImage()
+            let noteEntity = "Image" //Entity Name
+
+            let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+            let note = dataImage[indexPath.row]
+
+            if editingStyle == .delete {
+                managedContext.delete(note)
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    print("Error While Deleting Note: \(error.userInfo)")
+                }
+            }
+
+//               //Code to Fetch New Data From The DB and Reload Table.
+//               let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: noteEntity)
+//               do {
+//                   var fetchingImage = [Image]()
+//                   fetchingImage = try managedContext.fetch(fetchRequest) as! [Image]
+//               } catch let error as NSError {
+//                   print("Error While Fetching Data From DB: \(error.userInfo)")
+//               }
+//               bookTableView.reloadData()
+               tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }
     }
 }
