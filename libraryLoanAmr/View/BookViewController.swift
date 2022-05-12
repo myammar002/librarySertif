@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class BookViewController: UIViewController {
     var fetchData = FetchData()
+    var coreData = DatabaseHelper()
     @IBOutlet weak var bookTableView: UITableView!
     var dataModel = [ResponseBuku]()
     {
@@ -23,11 +25,14 @@ class BookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // coreData.deleteAllData(entity: "Image")
         title = "Books"
         bookTableView.delegate = self
         bookTableView.dataSource = self
         bookTableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "bookCell")
+        
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         self.fetchData.fetchData { dataArray in
@@ -66,14 +71,16 @@ extension BookViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath) as! BookTableViewCell
         let data = dataModel[indexPath.row]
+        let dataImage = coreData.fetchImage()
         cell.lbl_judul.text = "Nama Buku : \(data.nama_buku)"
         cell.lbl_tahun.text = "Tahun Rilis : \(data.tahun_rilis)"
         cell.lbl_penulis.text = "Penulis : \(data.penulis)"
-        let url = URL(string: data.gambar_buku)!
-        if let data = try? Data(contentsOf: url) {
-            let image: UIImage = UIImage(data: data)!
-            cell.imageBook.image = image
-        }
+//        let url = URL(string: data.gambar_buku)!
+//        if let data = try? Data(contentsOf: url) {
+//            let image: UIImage = UIImage(data: data)!
+//            cell.imageBook.image = image
+//        }
+        cell.imageBook.image = UIImage(data: dataImage[indexPath.row].img!)
         return cell
     }
     

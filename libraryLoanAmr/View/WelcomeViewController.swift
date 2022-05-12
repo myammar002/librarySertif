@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import GhostTypewriter
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var tes: TypewriterLabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tes.startTypewritingAnimation()
     }
 
 

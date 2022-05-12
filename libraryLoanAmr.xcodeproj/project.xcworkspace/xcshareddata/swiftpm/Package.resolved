@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ghosttypewriter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wibosco/GhostTypewriter",
+      "state" : {
+        "revision" : "878f4785c805b332454beedeaa145c524d059f64",
+        "version" : "2.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -13,6 +13,7 @@
 		A04DC6692826D0DB00A725E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04DC6672826D0DB00A725E6 /* Main.storyboard */; };
 		A04DC66B2826D0DE00A725E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04DC66A2826D0DE00A725E6 /* Assets.xcassets */; };
 		A04DC66E2826D0DE00A725E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04DC66C2826D0DE00A725E6 /* LaunchScreen.storyboard */; };
+		A084467F282BCD470001968A /* GhostTypewriter in Frameworks */ = {isa = PBXBuildFile; productRef = A084467E282BCD470001968A /* GhostTypewriter */; };
 		A09E60BA28272C72005534C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60B928272C72005534C5 /* LoginViewController.swift */; };
 		A09E60BC28272C97005534C5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60BB28272C97005534C5 /* RegisterViewController.swift */; };
 		A09E60BF28273AF2005534C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60BE28273AF2005534C5 /* HomeViewController.swift */; };
@@ -27,6 +28,8 @@
 		A09E60D92827BC7D005534C5 /* BorrowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09E60D72827BC7D005534C5 /* BorrowCell.xib */; };
 		A09E60DB2827BEF4005534C5 /* PinjamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60DA2827BEF4005534C5 /* PinjamViewController.swift */; };
 		A09E60DD2827C0FC005534C5 /* DetailPinjamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E60DC2827C0FC005534C5 /* DetailPinjamViewController.swift */; };
+		A0ECD3B9282D1065006FA52F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0ECD3B7282D1065006FA52F /* Model.xcdatamodeld */; };
+		A0ECD3BB282D10D9006FA52F /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECD3BA282D10D9006FA52F /* DatabaseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,8 @@
 		A09E60D72827BC7D005534C5 /* BorrowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorrowCell.xib; sourceTree = "<group>"; };
 		A09E60DA2827BEF4005534C5 /* PinjamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinjamViewController.swift; sourceTree = "<group>"; };
 		A09E60DC2827C0FC005534C5 /* DetailPinjamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPinjamViewController.swift; sourceTree = "<group>"; };
+		A0ECD3B8282D1065006FA52F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A0ECD3BA282D10D9006FA52F /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A084467F282BCD470001968A /* GhostTypewriter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,9 +96,11 @@
 				A04DC66A2826D0DE00A725E6 /* Assets.xcassets */,
 				A04DC66C2826D0DE00A725E6 /* LaunchScreen.storyboard */,
 				A04DC66F2826D0DE00A725E6 /* Info.plist */,
+				A0ECD3B7282D1065006FA52F /* Model.xcdatamodeld */,
 				A09E60BD28272CED005534C5 /* View */,
 				A09E60CE28278DCF005534C5 /* Model.swift */,
 				A09E60D028278EC0005534C5 /* FetchData.swift */,
+				A0ECD3BA282D10D9006FA52F /* DatabaseHelper.swift */,
 			);
 			path = libraryLoanAmr;
 			sourceTree = "<group>";
@@ -133,6 +141,9 @@
 			dependencies = (
 			);
 			name = libraryLoanAmr;
+			packageProductDependencies = (
+				A084467E282BCD470001968A /* GhostTypewriter */,
+			);
 			productName = libraryLoanAmr;
 			productReference = A04DC65E2826D0DB00A725E6 /* libraryLoanAmr.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +172,9 @@
 				Base,
 			);
 			mainGroup = A04DC6552826D0DB00A725E6;
+			packageReferences = (
+				A084467D282BCD470001968A /* XCRemoteSwiftPackageReference "GhostTypewriter" */,
+			);
 			productRefGroup = A04DC65F2826D0DB00A725E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,10 +215,12 @@
 				A09E60CF28278DCF005534C5 /* Model.swift in Sources */,
 				A04DC6622826D0DB00A725E6 /* AppDelegate.swift in Sources */,
 				A04DC6642826D0DB00A725E6 /* SceneDelegate.swift in Sources */,
+				A0ECD3B9282D1065006FA52F /* Model.xcdatamodeld in Sources */,
 				A09E60D82827BC7D005534C5 /* BorrowCell.swift in Sources */,
 				A09E60DD2827C0FC005534C5 /* DetailPinjamViewController.swift in Sources */,
 				A09E60CD2827763A005534C5 /* AddBookViewController.swift in Sources */,
 				A09E60BF28273AF2005534C5 /* HomeViewController.swift in Sources */,
+				A0ECD3BB282D10D9006FA52F /* DatabaseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +436,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A084467D282BCD470001968A /* XCRemoteSwiftPackageReference "GhostTypewriter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wibosco/GhostTypewriter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A084467E282BCD470001968A /* GhostTypewriter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A084467D282BCD470001968A /* XCRemoteSwiftPackageReference "GhostTypewriter" */;
+			productName = GhostTypewriter;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		A0ECD3B7282D1065006FA52F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A0ECD3B8282D1065006FA52F /* Model.xcdatamodel */,
+			);
+			currentVersion = A0ECD3B8282D1065006FA52F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A04DC6562826D0DB00A725E6 /* Project object */;
 }
